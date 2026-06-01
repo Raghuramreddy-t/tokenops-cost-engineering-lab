@@ -18,8 +18,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - run: npm install
+      - run: npx playwright install --with-deps
       - run: npm run validate
       - run: npm test
+      - run: npm run test:ui
   deploy:
     needs: validate
     environment:
