@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "name": "GitHub Copilot Legacy Premium Request Multipliers",
+    "billingModel": "legacy-premium-requests",
+    "applicability": "Existing annual Copilot Pro and Copilot Pro+ subscribers who remain on legacy premium request-based billing after June 1, 2026.",
+    "notComparableAsCurrency": true,
+    "verifiedOn": "2026-05-31",
+    "source": "https://docs.github.com/en/copilot/reference/copilot-billing/request-based-billing-legacy/model-multipliers-for-annual-plans",
+    "disclaimer": "Premium request multipliers do not apply to GitHub usage-based AI Credit billing."
+  },
+  "models": [
+    {
+      "name": "Claude Haiku 4.5",
+      "multiplier": 0.33
+    },
+    {
+      "name": "Claude Opus 4.5",
+      "multiplier": 15
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "multiplier": 27
+    },
+    {
+      "name": "Claude Opus 4.7",
+      "multiplier": 27
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "multiplier": 27
+    },
+    {
+      "name": "Claude Sonnet 4.5",
+      "multiplier": 6
+    },
+    {
+      "name": "Claude Sonnet 4.6",
+      "multiplier": 9
+    },
+    {
+      "name": "Gemini 2.5 Pro",
+      "multiplier": 1
+    },
+    {
+      "name": "Gemini 3 Flash",
+      "multiplier": 0.33
+    },
+    {
+      "name": "Gemini 3.1 Pro",
+      "multiplier": 6
+    },
+    {
+      "name": "Gemini 3.5 Flash",
+      "multiplier": 14
+    },
+    {
+      "name": "GPT-4.1",
+      "multiplier": 1
+    },
+    {
+      "name": "GPT-5.2",
+      "multiplier": 3
+    },
+    {
+      "name": "GPT-5.2-Codex",
+      "multiplier": 3
+    },
+    {
+      "name": "GPT-5.3-Codex",
+      "multiplier": 6
+    },
+    {
+      "name": "GPT-5.4",
+      "multiplier": 6
+    },
+    {
+      "name": "GPT-5.4 mini",
+      "multiplier": 6
+    },
+    {
+      "name": "GPT-5.5",
+      "multiplier": 57
+    },
+    {
+      "name": "GPT-5 mini",
+      "multiplier": 0.33
+    },
+    {
+      "name": "Raptor mini",
+      "multiplier": 0.33
+    }
+  ],
+  "featureMultipliers": [
+    {
+      "name": "Copilot code review",
+      "multiplier": 13,
+      "note": "Legacy premium-request multiplier only."
+    }
+  ]
+}

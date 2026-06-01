@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "verifiedOn": "2026-05-31",
+    "note": "Editable planning assumptions, not measured workloads."
+  },
+  "api": [
+    {
+      "id": "chat",
+      "name": "Prompt / Chat Response",
+      "description": "Short interactive request.",
+      "inputTokens": 1200,
+      "cachedInputTokens": 0,
+      "cacheWriteTokens": 0,
+      "outputTokens": 350,
+      "requestsPerDay": 25,
+      "daysPerMonth": 30
+    },
+    {
+      "id": "summary",
+      "name": "Document Summarization",
+      "description": "Stable instruction context.",
+      "inputTokens": 14000,
+      "cachedInputTokens": 2000,
+      "cacheWriteTokens": 0,
+      "outputTokens": 900,
+      "requestsPerDay": 50,
+      "daysPerMonth": 22
+    },
+    {
+      "id": "code-review",
+      "name": "Code Review",
+      "description": "Reviewing a change with context.",
+      "inputTokens": 22000,
+      "cachedInputTokens": 5000,
+      "cacheWriteTokens": 0,
+      "outputTokens": 1800,
+      "requestsPerDay": 20,
+      "daysPerMonth": 22
+    },
+    {
+      "id": "batch",
+      "name": "Batch Document Processing",
+      "description": "High-volume asynchronous classification.",
+      "inputTokens": 3500,
+      "cachedInputTokens": 0,
+      "cacheWriteTokens": 0,
+      "outputTokens": 250,
+      "requestsPerDay": 5000,
+      "daysPerMonth": 30
+    }
+  ],
+  "copilot": [
+    {
+      "id": "code-explain",
+      "name": "Lightweight Code Explanation",
+      "feature": "chat",
+      "inputTokens": 3500,
+      "cachedInputTokens": 500,
+      "cacheWriteTokens": 0,
+      "outputTokens": 700,
+      "interactionsPerMonth": 120
+    },
+    {
+      "id": "tests",
+      "name": "Unit Test Generation",
+      "feature": "chat",
+      "inputTokens": 8000,
+      "cachedInputTokens": 1500,
+      "cacheWriteTokens": 0,
+      "outputTokens": 1700,
+      "interactionsPerMonth": 80
+    },
+    {
+      "id": "legacy",
+      "name": "Legacy Code Analysis",
+      "feature": "cloud-agent",
+      "inputTokens": 55000,
+      "cachedInputTokens": 12000,
+      "cacheWriteTokens": 2000,
+      "outputTokens": 6000,
+      "interactionsPerMonth": 25
+    },
+    {
+      "id": "refactor",
+      "name": "Multi-File Refactor",
+      "feature": "cloud-agent",
+      "inputTokens": 90000,
+      "cachedInputTokens": 18000,
+      "cacheWriteTokens": 4000,
+      "outputTokens": 12000,
+      "interactionsPerMonth": 12
+    },
+    {
+      "id": "pipeline",
+      "name": "CI/CD Failure Investigation",
+      "feature": "chat",
+      "inputTokens": 18000,
+      "cachedInputTokens": 3000,
+      "cacheWriteTokens": 0,
+      "outputTokens": 2500,
+      "interactionsPerMonth": 50
+    }
+  ]
+}

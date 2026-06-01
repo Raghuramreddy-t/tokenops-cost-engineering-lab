@@ -1,0 +1,380 @@
+{
+  "metadata": {
+    "product": "TokenOps GitHub Copilot AI Credits Lab",
+    "currency": "USD",
+    "verifiedOn": "2026-05-31",
+    "creditUsdValue": 0.01,
+    "source": "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing",
+    "supportedModelsSource": "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
+    "disclaimer": "GitHub Copilot planning estimates only. Models, availability, pricing and billing rules may change after verification."
+  },
+  "autoSelection": {
+    "discountPercent": 10,
+    "eligibleFeatures": [
+      "chat",
+      "cli",
+      "cloud-agent"
+    ],
+    "eligiblePlanTypes": [
+      "paid"
+    ],
+    "eligibleModels": [
+      "GPT-4.1",
+      "GPT-5 mini",
+      "GPT-5.3-Codex",
+      "GPT-5.4",
+      "GPT-5.4 mini",
+      "Claude Haiku 4.5",
+      "Claude Sonnet 4.6",
+      "Raptor mini"
+    ],
+    "note": "Discount applies only for paid Copilot plans using auto model selection in Copilot Chat, Copilot CLI or Copilot cloud agent."
+  },
+  "features": [
+    {
+      "id": "chat",
+      "name": "Copilot Chat",
+      "billed": true
+    },
+    {
+      "id": "cli",
+      "name": "Copilot CLI",
+      "billed": true
+    },
+    {
+      "id": "cloud-agent",
+      "name": "Copilot Cloud Agent",
+      "billed": true
+    },
+    {
+      "id": "spaces",
+      "name": "Copilot Spaces",
+      "billed": true
+    },
+    {
+      "id": "spark",
+      "name": "Spark",
+      "billed": true
+    },
+    {
+      "id": "third-party-agent",
+      "name": "Third-Party Coding Agent",
+      "billed": true
+    },
+    {
+      "id": "code-completions",
+      "name": "Code Completions / Next Edit Suggestions",
+      "billed": false
+    }
+  ],
+  "models": [
+    {
+      "id": "gpt-4-1",
+      "provider": "openai",
+      "name": "GPT-4.1",
+      "releaseStatus": "closing-down",
+      "category": "Versatile",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 2.0,
+      "cachedInput": 0.5,
+      "cacheWrite": null,
+      "output": 8.0,
+      "note": "Closing down 2026-06-01."
+    },
+    {
+      "id": "gpt-5-mini",
+      "provider": "openai",
+      "name": "GPT-5 mini",
+      "releaseStatus": "ga",
+      "category": "Lightweight",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 0.25,
+      "cachedInput": 0.025,
+      "cacheWrite": null,
+      "output": 2.0,
+      "note": ""
+    },
+    {
+      "id": "gpt-5-2",
+      "provider": "openai",
+      "name": "GPT-5.2",
+      "releaseStatus": "closing-down",
+      "category": "Versatile",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 1.75,
+      "cachedInput": 0.175,
+      "cacheWrite": null,
+      "output": 14.0,
+      "note": "Closing down 2026-06-01."
+    },
+    {
+      "id": "gpt-5-2-codex",
+      "provider": "openai",
+      "name": "GPT-5.2-Codex",
+      "releaseStatus": "closing-down",
+      "category": "Powerful",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 1.75,
+      "cachedInput": 0.175,
+      "cacheWrite": null,
+      "output": 14.0,
+      "note": "Closing down 2026-06-01."
+    },
+    {
+      "id": "gpt-5-3-codex",
+      "provider": "openai",
+      "name": "GPT-5.3-Codex",
+      "releaseStatus": "ga",
+      "category": "Powerful",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 1.75,
+      "cachedInput": 0.175,
+      "cacheWrite": null,
+      "output": 14.0,
+      "note": ""
+    },
+    {
+      "id": "gpt-5-4",
+      "provider": "openai",
+      "name": "GPT-5.4",
+      "releaseStatus": "ga",
+      "category": "Versatile",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 2.5,
+      "cachedInput": 0.25,
+      "cacheWrite": null,
+      "output": 15.0,
+      "note": "Published pricing applies to prompts ≤272K tokens."
+    },
+    {
+      "id": "gpt-5-4-mini",
+      "provider": "openai",
+      "name": "GPT-5.4 mini",
+      "releaseStatus": "ga",
+      "category": "Lightweight",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 0.75,
+      "cachedInput": 0.075,
+      "cacheWrite": null,
+      "output": 4.5,
+      "note": ""
+    },
+    {
+      "id": "gpt-5-4-nano",
+      "provider": "openai",
+      "name": "GPT-5.4 nano",
+      "releaseStatus": "ga",
+      "category": "Lightweight",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 0.2,
+      "cachedInput": 0.02,
+      "cacheWrite": null,
+      "output": 1.25,
+      "note": ""
+    },
+    {
+      "id": "gpt-5-5",
+      "provider": "openai",
+      "name": "GPT-5.5",
+      "releaseStatus": "ga",
+      "category": "Powerful",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 5.0,
+      "cachedInput": 0.5,
+      "cacheWrite": null,
+      "output": 30.0,
+      "note": ""
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "provider": "anthropic",
+      "name": "Claude Haiku 4.5",
+      "releaseStatus": "ga",
+      "category": "Versatile",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 1.0,
+      "cachedInput": 0.1,
+      "cacheWrite": 1.25,
+      "output": 5.0,
+      "note": ""
+    },
+    {
+      "id": "claude-sonnet-4",
+      "provider": "anthropic",
+      "name": "Claude Sonnet 4",
+      "releaseStatus": "retired",
+      "category": "Versatile",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 3.0,
+      "cachedInput": 0.3,
+      "cacheWrite": 3.75,
+      "output": 15.0,
+      "note": "Retired 2026-05-01; suggested alternative: Claude Sonnet 4.6."
+    },
+    {
+      "id": "claude-sonnet-4-5",
+      "provider": "anthropic",
+      "name": "Claude Sonnet 4.5",
+      "releaseStatus": "ga",
+      "category": "Versatile",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 3.0,
+      "cachedInput": 0.3,
+      "cacheWrite": 3.75,
+      "output": 15.0,
+      "note": ""
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "provider": "anthropic",
+      "name": "Claude Sonnet 4.6",
+      "releaseStatus": "ga",
+      "category": "Versatile",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 3.0,
+      "cachedInput": 0.3,
+      "cacheWrite": 3.75,
+      "output": 15.0,
+      "note": ""
+    },
+    {
+      "id": "claude-opus-4-5",
+      "provider": "anthropic",
+      "name": "Claude Opus 4.5",
+      "releaseStatus": "ga",
+      "category": "Powerful",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 5.0,
+      "cachedInput": 0.5,
+      "cacheWrite": 6.25,
+      "output": 25.0,
+      "note": ""
+    },
+    {
+      "id": "claude-opus-4-6",
+      "provider": "anthropic",
+      "name": "Claude Opus 4.6",
+      "releaseStatus": "ga",
+      "category": "Powerful",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 5.0,
+      "cachedInput": 0.5,
+      "cacheWrite": 6.25,
+      "output": 25.0,
+      "note": ""
+    },
+    {
+      "id": "claude-opus-4-7",
+      "provider": "anthropic",
+      "name": "Claude Opus 4.7",
+      "releaseStatus": "ga",
+      "category": "Powerful",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 5.0,
+      "cachedInput": 0.5,
+      "cacheWrite": 6.25,
+      "output": 25.0,
+      "note": ""
+    },
+    {
+      "id": "claude-opus-4-8",
+      "provider": "anthropic",
+      "name": "Claude Opus 4.8",
+      "releaseStatus": "ga",
+      "category": "Powerful",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 5.0,
+      "cachedInput": 0.5,
+      "cacheWrite": 6.25,
+      "output": 25.0,
+      "note": ""
+    },
+    {
+      "id": "gemini-2-5-pro",
+      "provider": "google",
+      "name": "Gemini 2.5 Pro",
+      "releaseStatus": "ga",
+      "category": "Powerful",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 1.25,
+      "cachedInput": 0.125,
+      "cacheWrite": null,
+      "output": 10.0,
+      "note": "Published pricing applies to prompts ≤200K tokens."
+    },
+    {
+      "id": "gemini-3-flash",
+      "provider": "google",
+      "name": "Gemini 3 Flash",
+      "releaseStatus": "public-preview",
+      "category": "Lightweight",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 0.5,
+      "cachedInput": 0.05,
+      "cacheWrite": null,
+      "output": 3.0,
+      "note": "No long-context surcharge stated in GitHub pricing footnote."
+    },
+    {
+      "id": "gemini-3-1-pro",
+      "provider": "google",
+      "name": "Gemini 3.1 Pro",
+      "releaseStatus": "public-preview",
+      "category": "Powerful",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 2.0,
+      "cachedInput": 0.2,
+      "cacheWrite": null,
+      "output": 12.0,
+      "note": "Published pricing applies to prompts ≤200K tokens."
+    },
+    {
+      "id": "gemini-3-5-flash",
+      "provider": "google",
+      "name": "Gemini 3.5 Flash",
+      "releaseStatus": "ga",
+      "category": "Lightweight",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 1.5,
+      "cachedInput": 0.15,
+      "cacheWrite": null,
+      "output": 9.0,
+      "note": ""
+    },
+    {
+      "id": "raptor-mini",
+      "provider": "github",
+      "name": "Raptor mini",
+      "releaseStatus": "public-preview",
+      "category": "Versatile",
+      "pricingStatus": "verified",
+      "verifiedOn": "2026-05-31",
+      "input": 0.25,
+      "cachedInput": 0.025,
+      "cacheWrite": null,
+      "output": 2.0,
+      "note": "Uses GPT-5 mini pricing according to GitHub documentation."
+    }
+  ]
+}

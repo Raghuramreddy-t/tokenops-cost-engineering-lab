@@ -1,0 +1,22 @@
+{
+  "artifacts": [
+    {
+      "id": "public-lab",
+      "name": "Interactive TokenOps Lab",
+      "status": "Ready for Local Validation",
+      "url": ""
+    },
+    {
+      "id": "source-registry",
+      "name": "Official Source Registries",
+      "status": "Included",
+      "url": "assets/data/"
+    },
+    {
+      "id": "architecture-docs",
+      "name": "Architecture Documentation",
+      "status": "Included",
+      "url": "docs/architecture.md"
+    }
+  ]
+}

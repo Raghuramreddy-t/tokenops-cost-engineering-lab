@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "verifiedOn": "2026-05-31",
+    "policy": "Only official-documentation-backed changes affecting usage economics are listed."
+  },
+  "announcements": [
+    {
+      "id": "github-ai-credits",
+      "provider": "GitHub Copilot",
+      "category": "Billing",
+      "status": "Current documentation",
+      "effectiveDate": "2026-06-01",
+      "title": "GitHub AI Credits usage-based billing",
+      "summary": "Copilot interactions consume token-based AI Credits; 1 AI Credit equals $0.01 USD.",
+      "impact": "TokenOps models Copilot credits separately from direct API usage.",
+      "source": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals",
+      "verifiedOn": "2026-05-31"
+    },
+    {
+      "id": "copilot-model-closures-june",
+      "provider": "GitHub Copilot",
+      "category": "Model lifecycle",
+      "status": "Effective soon",
+      "effectiveDate": "2026-06-01",
+      "title": "GPT-4.1, GPT-5.2 and GPT-5.2-Codex closing down in Copilot",
+      "summary": "GitHub lists these Copilot models as closing down on June 1, 2026.",
+      "impact": "They remain available in history but are excluded from default current comparisons.",
+      "source": "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
+      "verifiedOn": "2026-05-31"
+    },
+    {
+      "id": "copilot-org-promotion",
+      "provider": "GitHub Copilot",
+      "category": "Plan allowance",
+      "status": "Effective soon",
+      "effectiveDate": "2026-06-01",
+      "endDate": "2026-09-01",
+      "title": "Promotional AI-credit allowances for existing Business and Enterprise customers",
+      "summary": "Existing customers receive higher included AI credits for the first three months of usage-based billing.",
+      "impact": "The team estimator can compare promotional and standard pooled allowances.",
+      "source": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises",
+      "verifiedOn": "2026-05-31"
+    },
+    {
+      "id": "copilot-agentic-consumption",
+      "provider": "GitHub Copilot",
+      "category": "Usage economics",
+      "status": "Current documentation",
+      "effectiveDate": null,
+      "title": "Agentic sessions and extended context may consume more AI Credits",
+      "summary": "GitHub states that long agentic sessions, larger context windows and higher reasoning consume more tokens and credits.",
+      "impact": "Agentic presets deliberately use larger editable context assumptions.",
+      "source": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals",
+      "verifiedOn": "2026-05-31"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "slug": "tokenops",
+  "name": "TokenOps Cost Engineering Lab",
+  "repository": "Raghuramreddy-t/tokenops-cost-engineering-lab",
+  "portfolioCategory": "Research Laboratories",
+  "systemType": "Interactive Laboratory",
+  "status": "Ready for Local Validation",
+  "featured": true,
+  "brand": {
+    "owner": "Raghuramreddy",
+    "tagline": "Designing technology for human experience"
+  },
+  "summary": "A browser-local decision lab for API model economics and GitHub Copilot AI Credits: compare verified pricing, estimate agentic usage, track model changes, and design lower-cost AI workflows with transparent assumptions.",
+  "problem": "AI usage economics vary by token type, cache behavior, processing mode, context tier, agentic workload and product-specific billing rules.",
+  "capabilities": [
+    "API model cost estimation",
+    "GitHub Copilot AI Credits estimation",
+    "Cross-provider comparison",
+    "Agentic workload forecasting",
+    "Verified pricing and lifecycle change radar",
+    "Official-source registry"
+  ],
+  "guardrails": [
+    "Browser-local calculation",
+    "No API keys",
+    "No pasted prompt transmission",
+    "API pricing and Copilot billing are separate",
+    "Planning estimates only, not billing reconciliation"
+  ],
+  "technologies": [
+    "HTML",
+    "CSS",
+    "Vanilla JavaScript",
+    "Static JSON",
+    "Node.js validation",
+    "GitHub Pages"
+  ],
+  "links": {
+    "repository": "https://github.com/Raghuramreddy-t/tokenops-cost-engineering-lab",
+    "liveDemo": "",
+    "portfolioPage": "https://raghuramreddy.tech/pages/tokenops.html",
+    "documentation": "https://github.com/Raghuramreddy-t/tokenops-cost-engineering-lab/tree/main/docs"
+  },
+  "release": {
+    "version": "0.2.0",
+    "status": "Learning Labs Ready",
+    "updatedAt": "2026-05-31",
+    "highlights": [
+      "Two complete learning journeys before calculators",
+      "GitHub Copilot billing transition and legacy PRU explainer",
+      "Worked examples, AI Credit protection playbook and lifecycle watch",
+      "Separate official-source API and Copilot registries"
+    ]
+  }
+}

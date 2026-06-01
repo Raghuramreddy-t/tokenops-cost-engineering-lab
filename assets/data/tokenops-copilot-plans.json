@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "verifiedOn": "2026-05-31",
+    "creditUsdValue": 0.01,
+    "individualSource": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals",
+    "organizationSource": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises",
+    "disclaimer": "Included credits and plan availability may change after verification."
+  },
+  "individualPlans": [
+    {
+      "id": "free",
+      "name": "Copilot Free",
+      "type": "individual",
+      "paid": false,
+      "monthlyUsd": 0,
+      "includedCredits": null,
+      "note": "GitHub states an AI-credit allowance exists, but a numeric allowance is not shown in the verified paid-plan table."
+    },
+    {
+      "id": "student",
+      "name": "Copilot Student",
+      "type": "individual",
+      "paid": false,
+      "monthlyUsd": 0,
+      "includedCredits": null,
+      "note": "GitHub states an AI-credit allowance exists, but a numeric allowance is not shown in the verified paid-plan table."
+    },
+    {
+      "id": "pro",
+      "name": "Copilot Pro",
+      "type": "individual",
+      "paid": true,
+      "monthlyUsd": 10,
+      "baseCredits": 1000,
+      "flexCredits": 500,
+      "includedCredits": 1500
+    },
+    {
+      "id": "pro-plus",
+      "name": "Copilot Pro+",
+      "type": "individual",
+      "paid": true,
+      "monthlyUsd": 39,
+      "baseCredits": 3900,
+      "flexCredits": 3100,
+      "includedCredits": 7000
+    },
+    {
+      "id": "max",
+      "name": "Copilot Max",
+      "type": "individual",
+      "paid": true,
+      "monthlyUsd": 100,
+      "baseCredits": 10000,
+      "flexCredits": 10000,
+      "includedCredits": 20000,
+      "note": "From June 1, 2026, documented as available only as an upgrade for users with existing Copilot plans."
+    }
+  ],
+  "organizationPlans": [
+    {
+      "id": "business",
+      "name": "Copilot Business",
+      "type": "organization",
+      "paid": true,
+      "monthlyUsd": null,
+      "includedCreditsPerSeat": 1900,
+      "promotionalCreditsPerSeat": 3000,
+      "promotionStart": "2026-06-01",
+      "promotionEnd": "2026-09-01",
+      "pooled": true
+    },
+    {
+      "id": "enterprise",
+      "name": "Copilot Enterprise",
+      "type": "organization",
+      "paid": true,
+      "monthlyUsd": null,
+      "includedCreditsPerSeat": 3900,
+      "promotionalCreditsPerSeat": 7000,
+      "promotionStart": "2026-06-01",
+      "promotionEnd": "2026-09-01",
+      "pooled": true
+    }
+  ]
+}

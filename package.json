@@ -1,0 +1,21 @@
+{
+  "name": "tokenops-cost-engineering-lab",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Browser-local lab for API model economics and GitHub Copilot AI Credits.",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "validate:manifest": "node scripts/validate-manifest.mjs",
+    "validate:api": "node scripts/validate-tokenops-api-data.mjs",
+    "validate:copilot": "node scripts/validate-tokenops-copilot-data.mjs",
+    "validate:announcements": "node scripts/validate-tokenops-announcements.mjs",
+    "check:encoding": "node scripts/check-encoding.mjs",
+    "validate": "npm run validate:manifest && npm run validate:api && npm run validate:copilot && npm run validate:announcements && npm run validate:learning && npm run check:encoding",
+    "test": "node scripts/test-tokenops-calculator.mjs",
+    "validate:learning": "node scripts/validate-tokenops-learning-data.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

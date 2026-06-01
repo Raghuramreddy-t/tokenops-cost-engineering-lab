@@ -1,0 +1,649 @@
+{
+  "metadata": {
+    "product": "TokenOps API Model Cost Lab",
+    "currency": "USD",
+    "verifiedOn": "2026-05-31",
+    "calculationType": "browser-local-estimation",
+    "disclaimer": "Direct API pricing estimates only. Pricing, availability, regional handling and limits may change after verification. Validate with official provider documentation before production budgeting."
+  },
+  "providers": [
+    {
+      "id": "openai",
+      "name": "OpenAI API",
+      "officialSource": "https://developers.openai.com/api/docs/pricing",
+      "models": [
+        {
+          "id": "gpt-5.5",
+          "name": "GPT-5.5",
+          "lifecycleStatus": "current",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [
+            "Short and long context are user-selected pricing tiers; the lab does not invent provider classification thresholds."
+          ],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Standard",
+              "tiers": [
+                {
+                  "id": "short",
+                  "label": "Short context",
+                  "input": 5,
+                  "cachedInput": 0.5,
+                  "output": 30
+                },
+                {
+                  "id": "long",
+                  "label": "Long context",
+                  "input": 10,
+                  "cachedInput": 1,
+                  "output": 45
+                }
+              ]
+            },
+            {
+              "id": "batch",
+              "label": "Batch",
+              "tiers": [
+                {
+                  "id": "short",
+                  "label": "Short context",
+                  "input": 2.5,
+                  "cachedInput": 0.25,
+                  "output": 15
+                },
+                {
+                  "id": "long",
+                  "label": "Long context",
+                  "input": 5,
+                  "cachedInput": 0.5,
+                  "output": 22.5
+                }
+              ]
+            },
+            {
+              "id": "flex",
+              "label": "Flex",
+              "tiers": [
+                {
+                  "id": "short",
+                  "label": "Short context",
+                  "input": 2.5,
+                  "cachedInput": 0.25,
+                  "output": 15
+                },
+                {
+                  "id": "long",
+                  "label": "Long context",
+                  "input": 5,
+                  "cachedInput": 0.5,
+                  "output": 22.5
+                }
+              ]
+            },
+            {
+              "id": "priority",
+              "label": "Priority",
+              "tiers": [
+                {
+                  "id": "short",
+                  "label": "Short context",
+                  "input": 12.5,
+                  "cachedInput": 1.25,
+                  "output": 75
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gpt-5.4",
+          "name": "GPT-5.4",
+          "lifecycleStatus": "current",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [
+            "Short and long context are user-selected pricing tiers; the lab does not invent provider classification thresholds."
+          ],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Standard",
+              "tiers": [
+                {
+                  "id": "short",
+                  "label": "Short context",
+                  "input": 2.5,
+                  "cachedInput": 0.25,
+                  "output": 15
+                },
+                {
+                  "id": "long",
+                  "label": "Long context",
+                  "input": 5,
+                  "cachedInput": 0.5,
+                  "output": 22.5
+                }
+              ]
+            },
+            {
+              "id": "batch",
+              "label": "Batch",
+              "tiers": [
+                {
+                  "id": "short",
+                  "label": "Short context",
+                  "input": 1.25,
+                  "cachedInput": 0.13,
+                  "output": 7.5
+                },
+                {
+                  "id": "long",
+                  "label": "Long context",
+                  "input": 2.5,
+                  "cachedInput": 0.25,
+                  "output": 11.25
+                }
+              ]
+            },
+            {
+              "id": "flex",
+              "label": "Flex",
+              "tiers": [
+                {
+                  "id": "short",
+                  "label": "Short context",
+                  "input": 1.25,
+                  "cachedInput": 0.13,
+                  "output": 7.5
+                },
+                {
+                  "id": "long",
+                  "label": "Long context",
+                  "input": 2.5,
+                  "cachedInput": 0.25,
+                  "output": 11.25
+                }
+              ]
+            },
+            {
+              "id": "priority",
+              "label": "Priority",
+              "tiers": [
+                {
+                  "id": "short",
+                  "label": "Short context",
+                  "input": 5,
+                  "cachedInput": 0.5,
+                  "output": 30
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gpt-5.4-mini",
+          "name": "GPT-5.4 mini",
+          "lifecycleStatus": "current",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Standard",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Published standard rate",
+                  "input": 0.75,
+                  "cachedInput": 0.075,
+                  "output": 4.5
+                }
+              ]
+            },
+            {
+              "id": "batch",
+              "label": "Batch",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Published batch rate",
+                  "input": 0.375,
+                  "cachedInput": 0.0375,
+                  "output": 2.25
+                }
+              ]
+            },
+            {
+              "id": "flex",
+              "label": "Flex",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Published flex rate",
+                  "input": 0.375,
+                  "cachedInput": 0.0375,
+                  "output": 2.25
+                }
+              ]
+            },
+            {
+              "id": "priority",
+              "label": "Priority",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Published priority rate",
+                  "input": 1.5,
+                  "cachedInput": 0.15,
+                  "output": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gpt-5.4-nano",
+          "name": "GPT-5.4 nano",
+          "lifecycleStatus": "current",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Standard",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Published standard rate",
+                  "input": 0.2,
+                  "cachedInput": 0.02,
+                  "output": 1.25
+                }
+              ]
+            },
+            {
+              "id": "batch",
+              "label": "Batch",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Published batch rate",
+                  "input": 0.1,
+                  "cachedInput": 0.01,
+                  "output": 0.625
+                }
+              ]
+            },
+            {
+              "id": "flex",
+              "label": "Flex",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Published flex rate",
+                  "input": 0.1,
+                  "cachedInput": 0.01,
+                  "output": 0.625
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Claude API",
+      "officialSource": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "models": [
+        {
+          "id": "claude-opus-4.8",
+          "name": "Claude Opus 4.8",
+          "lifecycleStatus": "current",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [
+            "Full 1M token context window is billed at standard pricing according to Anthropic documentation."
+          ],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Standard",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Global/default",
+                  "input": 5,
+                  "cachedInput": 0.5,
+                  "output": 25,
+                  "cacheWrite5m": 6.25,
+                  "cacheWrite1h": 10
+                }
+              ]
+            },
+            {
+              "id": "batch",
+              "label": "Batch",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Batch published rate",
+                  "input": 2.5,
+                  "cachedInput": null,
+                  "output": 12.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "claude-sonnet-4.6",
+          "name": "Claude Sonnet 4.6",
+          "lifecycleStatus": "current",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [
+            "Full 1M token context window is billed at standard pricing according to Anthropic documentation."
+          ],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Standard",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Global/default",
+                  "input": 3,
+                  "cachedInput": 0.3,
+                  "output": 15,
+                  "cacheWrite5m": 3.75,
+                  "cacheWrite1h": 6
+                }
+              ]
+            },
+            {
+              "id": "batch",
+              "label": "Batch",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Batch published rate",
+                  "input": 1.5,
+                  "cachedInput": null,
+                  "output": 7.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "claude-haiku-4.5",
+          "name": "Claude Haiku 4.5",
+          "lifecycleStatus": "current",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Standard",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Global/default",
+                  "input": 1,
+                  "cachedInput": 0.1,
+                  "output": 5,
+                  "cacheWrite5m": 1.25,
+                  "cacheWrite1h": 2
+                }
+              ]
+            },
+            {
+              "id": "batch",
+              "label": "Batch",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Batch published rate",
+                  "input": 0.5,
+                  "cachedInput": null,
+                  "output": 2.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "claude-sonnet-4",
+          "name": "Claude Sonnet 4",
+          "lifecycleStatus": "deprecated",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [
+            "Preserved historical comparison; deprecated in official Claude pricing documentation."
+          ],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Standard",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Historical/deprecated",
+                  "input": 3,
+                  "cachedInput": 0.3,
+                  "output": 15,
+                  "cacheWrite5m": 3.75,
+                  "cacheWrite1h": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "claude-haiku-3.5",
+          "name": "Claude Haiku 3.5",
+          "lifecycleStatus": "retired-platform-exception",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [
+            "Retired except on Amazon Bedrock and Vertex AI according to official Anthropic documentation."
+          ],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Standard",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Historical/platform exception",
+                  "input": 0.8,
+                  "cachedInput": 0.08,
+                  "output": 4,
+                  "cacheWrite5m": 1,
+                  "cacheWrite1h": 1.6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Gemini API",
+      "officialSource": "https://ai.google.dev/gemini-api/docs/pricing",
+      "models": [
+        {
+          "id": "gemini-3.1-pro-preview",
+          "name": "Gemini 3.1 Pro Preview",
+          "lifecycleStatus": "preview",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [
+            "Output price includes thinking tokens.",
+            "Rates change above 200K prompt tokens."
+          ],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Standard",
+              "tiers": [
+                {
+                  "id": "under-200k",
+                  "label": "Prompt ≤ 200K",
+                  "input": 2,
+                  "cachedInput": 0.2,
+                  "output": 12,
+                  "maxInputTokens": 200000
+                },
+                {
+                  "id": "over-200k",
+                  "label": "Prompt > 200K",
+                  "input": 4,
+                  "cachedInput": 0.4,
+                  "output": 18,
+                  "minInputTokens": 200001
+                }
+              ]
+            },
+            {
+              "id": "batch",
+              "label": "Batch",
+              "tiers": [
+                {
+                  "id": "under-200k",
+                  "label": "Prompt ≤ 200K",
+                  "input": 1,
+                  "cachedInput": 0.2,
+                  "output": 6,
+                  "maxInputTokens": 200000
+                },
+                {
+                  "id": "over-200k",
+                  "label": "Prompt > 200K",
+                  "input": 2,
+                  "cachedInput": 0.4,
+                  "output": 9,
+                  "minInputTokens": 200001
+                }
+              ]
+            },
+            {
+              "id": "flex",
+              "label": "Flex",
+              "tiers": [
+                {
+                  "id": "under-200k",
+                  "label": "Prompt ≤ 200K",
+                  "input": 1,
+                  "cachedInput": 0.2,
+                  "output": 6,
+                  "maxInputTokens": 200000
+                },
+                {
+                  "id": "over-200k",
+                  "label": "Prompt > 200K",
+                  "input": 2,
+                  "cachedInput": 0.4,
+                  "output": 9,
+                  "minInputTokens": 200001
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gemini-3-flash-preview",
+          "name": "Gemini 3 Flash Preview",
+          "lifecycleStatus": "preview",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [
+            "Output price includes thinking tokens."
+          ],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Standard",
+              "tiers": [
+                {
+                  "id": "text",
+                  "label": "Text/image/video",
+                  "input": 0.5,
+                  "cachedInput": 0.05,
+                  "output": 3
+                }
+              ]
+            },
+            {
+              "id": "batch",
+              "label": "Batch",
+              "tiers": [
+                {
+                  "id": "text",
+                  "label": "Text/image/video",
+                  "input": 0.25,
+                  "cachedInput": 0.05,
+                  "output": 1.5
+                }
+              ]
+            },
+            {
+              "id": "flex",
+              "label": "Flex",
+              "tiers": [
+                {
+                  "id": "text",
+                  "label": "Text/image/video",
+                  "input": 0.25,
+                  "cachedInput": 0.05,
+                  "output": 1.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI API",
+      "officialSource": "https://docs.x.ai/developers/pricing",
+      "models": [
+        {
+          "id": "grok-4.3",
+          "name": "Grok 4.3",
+          "lifecycleStatus": "current",
+          "pricingStatus": "verified",
+          "verifiedOn": "2026-05-31",
+          "notes": [
+            "Context window: 1M tokens.",
+            "Optional server-side tool costs are excluded until modeled as separately selected verified costs."
+          ],
+          "modes": [
+            {
+              "id": "standard",
+              "label": "Chat API",
+              "tiers": [
+                {
+                  "id": "default",
+                  "label": "Published rate",
+                  "input": 1.25,
+                  "cachedInput": 0.2,
+                  "output": 2.5
+                }
+              ]
+            }
+          ],
+          "contextWindowTokens": 1000000
+        }
+      ]
+    }
+  ]
+}

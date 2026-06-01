@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "verifiedOn": "2026-05-31",
+    "purpose": "Educational modules and worked examples, sourced from the pricing registries and official GitHub billing documentation."
+  },
+  "apiStrategies": [
+    {
+      "title": "Route by workload",
+      "body": "Use a lower-cost model for classification, extraction and short summaries; reserve higher-cost reasoning for cases that need it."
+    },
+    {
+      "title": "Control output budget",
+      "body": "Output tokens are often materially more expensive than input tokens. Ask for precise structures and bounded response sizes."
+    },
+    {
+      "title": "Reuse stable context",
+      "body": "When a provider supports caching, repeated instructions or reference context may be billed at a lower cached-input rate."
+    },
+    {
+      "title": "Use async pricing modes",
+      "body": "For non-urgent processing, compare verified Batch or Flex modes when available in official provider pricing."
+    },
+    {
+      "title": "Watch threshold pricing",
+      "body": "Very large prompts can cross documented pricing tiers. A single context expansion can change the unit economics."
+    },
+    {
+      "title": "Validate quality, not price alone",
+      "body": "Cost reduction is useful only if accuracy, safety, latency and output usability remain acceptable."
+    }
+  ],
+  "copilotStrategies": [
+    {
+      "number": "01",
+      "title": "Start with no-credit features",
+      "body": "On paid Copilot plans, code completions and next edit suggestions are not billed in AI credits. Use chat or agent workflows only when the task needs them.",
+      "certainty": "documented"
+    },
+    {
+      "number": "02",
+      "title": "Use Auto where appropriate",
+      "body": "For eligible paid-plan Chat, CLI and cloud-agent use, GitHub documents a 10% model-cost discount. Auto is optimized for task fit, reliability and availability—not merely the cheapest model.",
+      "certainty": "documented"
+    },
+    {
+      "number": "03",
+      "title": "Trim the context you send",
+      "body": "Limit the files, chat history and instructions included in an interaction. Input volume directly influences token-based cost.",
+      "certainty": "documented-principle"
+    },
+    {
+      "number": "04",
+      "title": "Preserve useful cached context",
+      "body": "Cached-token pricing is lower than fresh input for published Copilot models. Avoid unnecessary session switching when it causes useful context to be rebuilt.",
+      "certainty": "documented-plus-guidance"
+    },
+    {
+      "number": "05",
+      "title": "Choose lighter models for routine work",
+      "body": "Simple explanations, small edits and predictable transformations often do not require frontier-model pricing.",
+      "certainty": "documented-principle"
+    },
+    {
+      "number": "06",
+      "title": "Break down agentic tasks",
+      "body": "Cloud-agent and multi-step workflows can involve multiple model calls. Narrow task boundaries make assumptions and spending easier to control.",
+      "certainty": "documented-plus-guidance"
+    },
+    {
+      "number": "07",
+      "title": "Minimize unused tool context",
+      "body": "Where tools or MCP schemas are included in the model context, unnecessary tool exposure can increase input volume. Treat this as an optimization hypothesis and verify with usage data.",
+      "certainty": "inference"
+    },
+    {
+      "number": "08",
+      "title": "Set budgets before overage",
+      "body": "GitHub supports budget controls. Business and Enterprise pools can be exhausted by heavy users, and there is no automatic fallback to cheaper models when budgets are exhausted.",
+      "certainty": "documented"
+    }
+  ],
+  "copilotExamples": [
+    {
+      "task": "Quick explanation",
+      "model": "GPT-5 mini",
+      "inputTokens": 500,
+      "cachedInputTokens": 0,
+      "outputTokens": 300,
+      "note": "Small chat interaction"
+    },
+    {
+      "task": "Generate unit tests",
+      "model": "Claude Sonnet 4.6",
+      "inputTokens": 4000,
+      "cachedInputTokens": 500,
+      "outputTokens": 1500,
+      "note": "Moderate coding request"
+    },
+    {
+      "task": "Multi-file refactor",
+      "model": "Claude Opus 4.8",
+      "inputTokens": 40000,
+      "cachedInputTokens": 8000,
+      "outputTokens": 8000,
+      "note": "High-context agentic assumption"
+    },
+    {
+      "task": "Architecture analysis",
+      "model": "GPT-5.5",
+      "inputTokens": 100000,
+      "cachedInputTokens": 25000,
+      "outputTokens": 10000,
+      "note": "Large reasoning workflow"
+    }
+  ]
+}
