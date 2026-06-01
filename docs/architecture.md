@@ -1,18 +1,24 @@
-# TokenOps Architecture
+# TokenOps Portfolio-Hosted Module Architecture
 
-## Boundary
+## Product boundary
 
-TokenOps is a static browser-local lab. The browser loads JSON registries and executes deterministic cost calculations. There is no server-side processing, authentication, database, external prompt submission or billing reconciliation.
+TokenOps is maintained in its own repository but rendered publicly inside the portfolio website. The repository produces an embed bundle, and the portfolio build copies that bundle into its deployment artifact.
 
-## Modules
+```text
+TokenOps source repository
+  └── npm run build:embed
+      └── dist/portfolio-embed
+             ↓ consumed at portfolio build time
+raghuramreddy-updated/pages/tokenops.html
+```
 
-| Module | Purpose | Source of truth |
-|---|---|---|
-| API Model Cost Lab | Estimate direct API usage economics | Provider official pricing documentation |
-| GitHub Copilot AI Credits Lab | Estimate Copilot token-based credits and plan fit | Official GitHub Copilot documentation |
-| Change Radar | Track verified changes affecting economics | Official product documentation |
-| Source Registry | Display verification sources and dates | JSON metadata |
+## Why this boundary
 
-## Security and privacy
+- Pricing registries and calculator logic have one owner.
+- The portfolio retains one public brand shell and one public URL.
+- No browser-time dependency on raw GitHub content is required.
+- TokenOps releases can be validated before becoming visible in the portfolio.
 
-The prompt text area exists only to estimate local input-token volume. It must not be stored, transmitted, logged or included in analytics.
+## Runtime behavior
+
+Critical registries are loaded first. Calculator initialization stops with a visible error state only if a required pricing/scenario resource fails. Educational content and the Change Radar are optional: their failure never removes the calculators.

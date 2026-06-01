@@ -5,7 +5,7 @@
   "repository": "Raghuramreddy-t/tokenops-cost-engineering-lab",
   "portfolioCategory": "Research Laboratories",
   "systemType": "Interactive Laboratory",
-  "status": "Ready for Local Validation",
+  "status": "Portfolio-Hosted Module — Ready for Integration",
   "featured": true,
   "brand": {
     "owner": "Raghuramreddy",
@@ -43,14 +43,15 @@
     "documentation": "https://github.com/Raghuramreddy-t/tokenops-cost-engineering-lab/tree/main/docs"
   },
   "release": {
-    "version": "0.2.0",
-    "status": "Learning Labs Ready",
+    "version": "0.3.0",
+    "status": "Portfolio Embed Ready",
     "updatedAt": "2026-05-31",
     "highlights": [
-      "Two complete learning journeys before calculators",
-      "GitHub Copilot billing transition and legacy PRU explainer",
-      "Worked examples, AI Credit protection playbook and lifecycle watch",
-      "Separate official-source API and Copilot registries"
+      "Portfolio-hosted module distribution",
+      "Calculator-first API and Copilot labs",
+      "Explicit provider and model selection",
+      "Resilient critical and optional data loading",
+      "Portfolio-aligned design tokens"
     ]
   }
 }

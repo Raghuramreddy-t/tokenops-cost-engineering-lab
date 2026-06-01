@@ -1,22 +1,22 @@
 {
   "artifacts": [
     {
-      "id": "public-lab",
-      "name": "Interactive TokenOps Lab",
-      "status": "Ready for Local Validation",
-      "url": ""
+      "id": "portfolio-embed",
+      "name": "TokenOps Portfolio Embed Bundle",
+      "status": "Ready for Integration",
+      "path": "dist/portfolio-embed"
     },
     {
       "id": "source-registry",
       "name": "Official Source Registries",
-      "status": "Included",
-      "url": "assets/data/"
+      "status": "Preserved",
+      "path": "assets/data"
     },
     {
-      "id": "architecture-docs",
-      "name": "Architecture Documentation",
-      "status": "Included",
-      "url": "docs/architecture.md"
+      "id": "local-harness",
+      "name": "Local Integration Harness",
+      "status": "Ready",
+      "path": "index.html"
     }
   ]
 }

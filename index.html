@@ -3,168 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>TokenOps Cost Engineering Lab | Raghuramreddy</title>
-  <meta name="description" content="Learn and estimate API model costs and GitHub Copilot AI Credits with official-source pricing, scenario calculators and token-saving strategies.">
-  <meta property="og:title" content="TokenOps Cost Engineering Lab">
-  <meta property="og:description" content="Learn API model economics and GitHub Copilot AI Credits, then calculate your own workload assumptions.">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="stylesheet" href="./assets/css/tokenops-lab.css">
-  <link rel="stylesheet" href="./assets/css/learning.css">
+  <title>TokenOps Local Portfolio Embed Harness | Raghuramreddy</title>
+  <style>
+    :root,[data-theme="dark"]{
+      --bg-primary:#0a0a0f;--bg-secondary:#111118;--bg-tertiary:#1a1a24;
+      --text-primary:#f8fafc;--text-secondary:#94a3b8;--text-muted:#64748b;
+      --accent-primary:#3b82f6;--accent-secondary:#8b5cf6;
+      --accent-gradient:linear-gradient(135deg,#3b82f6 0%,#8b5cf6 100%);
+      --border-color:#1e293b;--card-bg:rgba(17,17,24,.8);
+      --glass-bg:rgba(17,17,24,.9);--glass-border:rgba(255,255,255,.1);
+      --font-primary:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --container-max:1180px;--container-padding:24px;
+    }
+    *{box-sizing:border-box} body{margin:0;background:var(--bg-primary);color:var(--text-primary);font-family:var(--font-primary)}
+    .harness-nav{position:sticky;top:0;z-index:10;background:var(--glass-bg);border-bottom:1px solid var(--glass-border);backdrop-filter:blur(20px)}
+    .nav-inner{max-width:var(--container-max);margin:auto;padding:14px var(--container-padding);display:flex;justify-content:space-between;align-items:center}
+    .brand{display:flex;align-items:center;gap:12px}.logo{width:40px;height:40px;display:grid;place-items:center;border-radius:10px;background:var(--accent-gradient);font-size:13px;font-weight:700}
+    .brand strong{display:block}.brand small{display:block;font-size:10px;background:var(--accent-gradient);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .local{font-size:12px;color:var(--text-secondary);border:1px solid var(--border-color);border-radius:999px;padding:7px 10px}
+    footer{max-width:var(--container-max);margin:0 auto;padding:2rem var(--container-padding);border-top:1px solid var(--border-color);color:var(--text-secondary);font-size:.85rem}
+  </style>
+  <link rel="stylesheet" href="./dist/portfolio-embed/tokenops-lab.css">
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="./" aria-label="TokenOps home"><span class="brand-mark">RRR</span><span><strong>Raghuramreddy</strong><small>Designing technology for human experience</small></span></a>
-  <button class="theme-button" id="theme-toggle" aria-label="Toggle light and dark theme">◐</button>
-</header>
-<main>
-<section class="hero container">
- <span class="eyebrow">AI Usage Economics · Learn, Calculate, Govern</span>
- <h1>TokenOps <span>Cost Engineering Lab</span></h1>
- <p class="lead">Understand what consumes cost, compare verified pricing, model GitHub Copilot AI Credits, and turn AI usage into an engineering decision instead of a surprise bill.</p>
- <div class="trust-strip" aria-label="Trust details"><span>Browser-Local Calculation</span><span>Official Source Registry</span><span>API + Copilot Models Kept Separate</span><span>Verified: May 31, 2026</span></div>
- <div class="notice"><strong>Privacy:</strong> Pasted text is processed only in your browser for estimation. Do not paste secrets, credentials, private documents or confidential content.</div>
-</section>
-
-<section class="story-section" aria-labelledby="journey-title">
- <div class="story-intro">
-  <div class="story-card">
-   <span class="eyebrow">Two Labs · One Purpose</span>
-   <h2 id="journey-title">Understand AI cost <span>before</span> you scale it.</h2>
-   <p><strong>API Model Cost Lab</strong> explains direct provider economics for applications you build. <strong>GitHub Copilot AI Credits Lab</strong> explains coding-assistant usage, plan allowances, agentic cost exposure and the transition from legacy premium requests.</p>
-  </div>
-  <div class="story-card" aria-label="Verified headline facts">
-   <div class="story-stat"><strong>$0.01</strong><span>equals one GitHub AI Credit</span></div>
-   <div class="story-stat"><strong>2</strong><span>separate billing models, never mixed</span></div>
-   <div class="story-stat"><strong>0</strong><span>server-side prompt submissions</span></div>
-  </div>
- </div>
-</section>
-
-<section class="container workspace">
- <nav class="tabs" role="tablist" aria-label="TokenOps modules">
-  <button role="tab" class="tab active" aria-selected="true" aria-controls="panel-api" data-panel="api">API Model Cost Lab</button>
-  <button role="tab" class="tab" aria-selected="false" aria-controls="panel-copilot" data-panel="copilot">GitHub Copilot AI Credits</button>
-  <button role="tab" class="tab" aria-selected="false" aria-controls="panel-radar" data-panel="radar">Change Radar</button>
-  <button role="tab" class="tab" aria-selected="false" aria-controls="panel-sources" data-panel="sources">Source Registry</button>
- </nav>
-
- <section id="panel-api" class="panel active" role="tabpanel" tabindex="0">
-  <div class="section-heading"><div><h2>API Model Cost Lab</h2><p>Learn direct provider API economics, then calculate the same workload across verified model rates.</p></div><span class="badge verified">Direct API only</span></div>
-  <div class="learn-grid">
-   <article class="learn-card blue"><span class="step">Input</span><h3>What you send</h3><p>Prompts, instructions, documents, structured payloads and prior context.</p></article>
-   <article class="learn-card orange"><span class="step">Output</span><h3>What is generated</h3><p>Answers, code, summaries and tool-ready structures. Output is often the higher-cost component.</p></article>
-   <article class="learn-card green"><span class="step">Cached</span><h3>What is reused</h3><p>Stable context billed through a published cached-input rate where supported.</p></article>
-   <article class="learn-card purple"><span class="step">Cache write</span><h3>What is stored</h3><p>Anthropic publishes cache-write rates separately; the calculator models this field only where verified.</p></article>
-   <article class="learn-card yellow"><span class="step">Mode</span><h3>How it is processed</h3><p>Standard, batch, flex and priority pricing are different modes only where the provider publishes them.</p></article>
-   <article class="learn-card red"><span class="step">Threshold</span><h3>How large it becomes</h3><p>Some very large prompts cross documented context-price tiers.</p></article>
-  </div>
-  <div class="formula-box"><strong>Direct API cost formula</strong><br><code>Cost = [(uncached input × input rate) + (cached input × cached rate) + (cache write × write rate) + (output × output rate)] ÷ 1,000,000</code></div>
-  <div class="section-divider"><h3>Six engineering levers that change direct API spend</h3><p>Cost control is an architecture choice, not a one-time model selection.</p></div>
-  <div class="strategy-grid" id="api-strategies"></div>
-  <div class="section-divider"><h3>Calculate your workload</h3><p>Start with a scenario, then replace estimates with measured token counts when available.</p></div>
-  <div class="builder-grid">
-   <form id="api-form" class="builder" autocomplete="off">
-    <label>Scenario preset<select id="api-scenario"></select></label>
-    <label>Estimate from text<textarea id="api-text" rows="4" placeholder="Optional: paste public-safe text to estimate input tokens locally."></textarea></label>
-    <div class="input-grid">
-     <label>Input tokens<input id="api-input" type="number" min="0" value="1200"></label>
-     <label>Cached input tokens<input id="api-cached" type="number" min="0" value="0"></label>
-     <label>Cache write tokens<input id="api-write" type="number" min="0" value="0"></label>
-     <label>Output tokens<input id="api-output" type="number" min="0" value="350"></label>
-     <label>Requests / day<input id="api-requests" type="number" min="1" value="25"></label>
-     <label>Days / month<input id="api-days" type="number" min="1" max="31" value="30"></label>
+  <nav class="harness-nav" aria-label="Local preview portfolio shell">
+    <div class="nav-inner">
+      <div class="brand"><span class="logo">RRR</span><span><strong>Raghuramreddy</strong><small>Designing technology for human experience</small></span></div>
+      <span class="local">Local module preview only</span>
     </div>
-    <div class="input-grid two">
-     <label>Processing mode<select id="api-mode"><option value="standard">Standard</option><option value="batch">Batch</option><option value="flex">Flex</option><option value="priority">Priority</option></select></label>
-     <label>Context tier<select id="api-tier"><option value="auto">Auto where threshold exists</option><option value="short">Short / default</option><option value="long">Long context</option></select></label>
-    </div>
-    <p class="microcopy">Text estimation uses a rough local heuristic. For budgeting from measured usage, enter known token counts manually.</p>
-   </form>
-   <aside class="insight-card" id="api-insight" aria-live="polite"></aside>
-  </div>
-  <div class="table-wrap"><table><caption>Comparable direct API cost estimates for the entered scenario</caption><thead><tr><th>Provider / Model</th><th>Status</th><th>Rate Applied</th><th>Per Request</th><th>Monthly</th><th>Annual</th></tr></thead><tbody id="api-results"></tbody></table></div>
-  <p class="warning">Lowest cost does not imply equivalent quality, latency, safety, context behavior or tool capability.</p>
- </section>
-
- <section id="panel-copilot" class="panel" role="tabpanel" tabindex="0" hidden>
-  <div class="section-heading"><div><h2>GitHub Copilot AI Credits Lab</h2><p>Learn the current usage-based model, understand the legacy exception, then forecast plan usage.</p></div><span class="badge github">GitHub billing model</span></div>
-  <div class="story-card">
-   <span class="eyebrow">Billing Transition · June 1, 2026</span>
-   <h2 style="margin:14px 0 8px;font-size:clamp(28px,4vw,44px);letter-spacing:-.05em">From premium-request multipliers<br><span style="color:#fb923c">to token-based AI Credits</span></h2>
-   <p style="color:var(--muted);margin:0">GitHub documents usage-based AI Credits as the current billing model. Premium-request multipliers continue only for eligible existing annual Copilot Pro and Pro+ subscribers who remain on the legacy model after June 1, 2026.</p>
-  </div>
-  <div class="split-explainer">
-   <article class="billing-card old"><h3>Legacy: Premium Requests</h3><p>For qualifying existing annual Pro / Pro+ subscribers only.</p><ul><li>One interaction consumes a request multiplied by model weight.</li><li>Powerful model multipliers can be high.</li><li>Not the current AI Credit formula.</li></ul></article>
-   <article class="billing-card new"><h3>Current: AI Credits</h3><p>Usage-based calculation from token consumption.</p><ul><li>Input, output and cached tokens are model-priced.</li><li>Total cost converts to AI Credits.</li><li><strong>1 AI Credit = $0.01 USD.</strong></li></ul></article>
-  </div>
-  <div class="legacy-warning"><strong>Do not compare PRUs as dollars.</strong> The old unit is a request multiplier; the new unit is token-priced AI Credit usage. The legacy view is included only to explain the billing change.</div>
-  <div class="formula-box"><strong>GitHub Copilot AI Credit formula</strong><br><code>AI Credits = {[(input × input rate) + (cached × cached rate) + (cache write × write rate where published) + (output × output rate)] ÷ 1,000,000} ÷ $0.01</code></div>
-  <div class="learn-grid">
-   <article class="learn-card blue"><span class="step">Input</span><h3>Everything sent</h3><p>Prompt, selected code, chat history, file content and included context.</p></article>
-   <article class="learn-card orange"><span class="step">Output</span><h3>Everything generated</h3><p>Code, explanations, test cases, documentation and analysis.</p></article>
-   <article class="learn-card green"><span class="step">Cached</span><h3>Reused context</h3><p>Cached input has a published lower rate in GitHub’s model pricing table.</p></article>
-   <article class="learn-card red"><span class="step">Agentic</span><h3>Multiple model calls</h3><p>Complex cloud-agent work across files can consume much more than a quick chat.</p></article>
-   <article class="learn-card yellow"><span class="step">No credit</span><h3>Paid-plan suggestions</h3><p>Code completions and next edit suggestions are not billed in AI Credits on paid plans.</p></article>
-   <article class="learn-card purple"><span class="step">Auto</span><h3>Eligible discount</h3><p>Paid-plan Auto selection in Chat, CLI or cloud agent qualifies for a documented 10% model-cost discount.</p></article>
-  </div>
-  <div class="section-divider"><h3>Plan allowances</h3><p>Individual plans use monthly allowances; Business and Enterprise allowances are pooled across assigned seats.</p></div>
-  <div class="plan-strip" id="copilot-plan-cards"></div>
-  <div class="learn-note"><strong>Enterprise control:</strong> GitHub documents pooled credits, optional overage controls, and no automatic fallback to cheaper models after a budget is exhausted.</div>
-  <div class="section-divider"><h3>Same task, different AI Credit exposure</h3><p>Worked examples show why task size and model choice matter. They are planning assumptions, not measured bills.</p></div>
-  <div class="comparison-mini"><table><caption>Worked GitHub Copilot AI Credit examples</caption><thead><tr><th>Task</th><th>Model</th><th>Input</th><th>Cached</th><th>Output</th><th>Cost</th><th>AI Credits</th></tr></thead><tbody id="copilot-example-results"></tbody></table></div>
-  <div class="section-divider"><h3>Legacy PRU multiplier reference</h3><p>This table exists to explain the transition only. It applies only to eligible annual-plan subscribers remaining on legacy billing.</p></div>
-  <div class="comparison-mini"><table><caption>Legacy premium request multipliers — education-only reference</caption><thead><tr><th>Model</th><th>Legacy multiplier</th><th>Model</th><th>Legacy multiplier</th></tr></thead><tbody id="legacy-pru-results"></tbody></table></div>
-  <div class="section-divider"><h3>Eight ways to protect your AI Credits budget</h3><p>Documented behavior is labeled separately from practical inference.</p></div>
-  <div class="strategy-grid" id="copilot-strategies"></div>
-  <div class="section-divider"><h3>Forecast your Copilot usage</h3><p>Choose a scenario and plan, then model the monthly allowance impact.</p></div>
-  <div class="builder-grid">
-   <form id="copilot-form" class="builder" autocomplete="off">
-    <label>Scenario preset<select id="copilot-scenario"></select></label>
-    <div class="input-grid">
-     <label>Plan<select id="copilot-plan"></select></label>
-     <label>Seats<input id="copilot-seats" type="number" min="1" value="1"></label>
-     <label>Feature<select id="copilot-feature"></select></label>
-     <label>Models shown<select id="copilot-status-filter"><option value="current">GA / Preview only</option><option value="all">Include closing-down / retired</option></select></label>
-    </div>
-    <div class="input-grid">
-     <label>Input tokens<input id="copilot-input" type="number" min="0" value="3500"></label>
-     <label>Cached input tokens<input id="copilot-cached" type="number" min="0" value="500"></label>
-     <label>Cache write tokens<input id="copilot-write" type="number" min="0" value="0"></label>
-     <label>Output tokens<input id="copilot-output" type="number" min="0" value="700"></label>
-     <label>Interactions / month<input id="copilot-interactions" type="number" min="1" value="120"></label>
-    </div>
-    <label class="checkbox"><input id="copilot-auto" type="checkbox"> Estimate Auto model selection discount only for eligible feature/model combinations</label>
-    <label class="checkbox"><input id="copilot-promo" type="checkbox" checked> Use June 1–September 1, 2026 promotional pool for existing Business / Enterprise customers</label>
-    <p class="microcopy">Copilot results are planning estimates using GitHub-published per-token rates. Copilot code review may also use GitHub Actions minutes; that second charge is not estimated here.</p>
-   </form>
-   <aside class="insight-card" id="copilot-insight" aria-live="polite"></aside>
-  </div>
-  <div class="table-wrap"><table><caption>Estimated monthly Copilot AI Credit use by model</caption><thead><tr><th>Model</th><th>Status</th><th>Cost / Interaction</th><th>AI Credits / Month</th><th>Allowance Result</th></tr></thead><tbody id="copilot-results"></tbody></table></div>
-  <p class="warning"><strong>Code review warning:</strong> GitHub documents Copilot code review as consuming both AI Credits and GitHub Actions minutes, and does not disclose the selected model for each review.</p>
-  <div class="section-divider"><h3>Model lifecycle watch</h3><p>Models closing down or already retired stay visible for migration awareness, not as recommended defaults.</p></div>
-  <div id="copilot-model-watch" class="card-grid"></div>
- </section>
- <section id="panel-radar" class="panel" role="tabpanel" tabindex="0" hidden>
-  <div class="section-heading"><div><h2>AI Usage Economics Change Radar</h2><p>Officially sourced changes that affect billing, availability or model-selection decisions.</p></div><span class="badge verified">Verified announcements</span></div>
-  <div id="radar-cards" class="card-grid"></div>
- </section>
- <section id="panel-sources" class="panel" role="tabpanel" tabindex="0" hidden>
-  <div class="section-heading"><div><h2>Source Registry</h2><p>What was verified, when, and from which official source.</p></div><span class="badge verified">Primary sources only</span></div>
-  <div id="source-cards" class="source-grid"></div>
- </section>
-</section>
-<section class="container limitations">
- <h2>Limitations and Controls</h2>
- <div class="card-grid">
-  <article><h3>Estimate, not invoice</h3><p>TokenOps does not reconcile actual provider or GitHub bills. Use exported usage or billing data for final spend decisions.</p></article>
-  <article><h3>Separate economic models</h3><p>Direct API pricing and GitHub Copilot AI Credits are shown in separate labs because product billing is not interchangeable.</p></article>
-  <article><h3>Lifecycle-aware</h3><p>Historical and closing-down models remain visible for migration awareness without being promoted as current defaults.</p></article>
-  <article><h3>Evidence first</h3><p>Current pricing and billing records require primary official sources and a verification date.</p></article>
- </div>
-</section>
-</main>
-<footer class="site-footer"><div><strong>Raghuramreddy</strong><small>Designing technology for human experience</small></div><p>TokenOps provides transparent planning estimates. Official sources remain the authority for billing decisions.</p></footer>
-<script src="./assets/js/theme.js" defer></script>
-<script type="module" src="./assets/js/pages/tokenops-app.js"></script>
-</body></html>
+  </nav>
+  <main><div id="tokenops-lab-root"></div></main>
+  <footer><strong>Local development harness.</strong> The public TokenOps experience is intended to render inside the portfolio website, not from this repository directly.</footer>
+  <script type="module" src="./dist/portfolio-embed/tokenops-lab.js"></script>
+</body>
+</html>
