@@ -1,19 +1,26 @@
 {
   "name": "tokenops-cost-engineering-lab",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
-  "description": "Browser-local lab for API model economics and GitHub Copilot AI Credits.",
+  "description": "Portfolio-hosted interactive module for API model economics and GitHub Copilot AI Credits.",
   "scripts": {
-    "start": "node scripts/serve.mjs",
+    "build:embed": "node scripts/build-portfolio-embed.mjs",
     "validate:manifest": "node scripts/validate-manifest.mjs",
     "validate:api": "node scripts/validate-tokenops-api-data.mjs",
     "validate:copilot": "node scripts/validate-tokenops-copilot-data.mjs",
     "validate:announcements": "node scripts/validate-tokenops-announcements.mjs",
+    "validate:learning": "node scripts/validate-tokenops-learning-data.mjs",
+    "validate:embed": "node scripts/validate-embed-output.mjs",
     "check:encoding": "node scripts/check-encoding.mjs",
-    "validate": "npm run validate:manifest && npm run validate:api && npm run validate:copilot && npm run validate:announcements && npm run validate:learning && npm run check:encoding",
-    "test": "node scripts/test-tokenops-calculator.mjs",
-    "validate:learning": "node scripts/validate-tokenops-learning-data.mjs"
+    "validate": "npm run validate:manifest && npm run validate:api && npm run validate:copilot && npm run validate:announcements && npm run validate:learning && npm run check:encoding && npm run build:embed && npm run validate:embed",
+    "test": "node scripts/test-calculators.mjs && node scripts/test-embed-contract.mjs",
+    "test:ui": "npm run build:embed && playwright test",
+    "validate:release": "npm run validate && npm test && npm run test:ui",
+    "start": "npm run build:embed && node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
   },
   "engines": {
     "node": ">=20"

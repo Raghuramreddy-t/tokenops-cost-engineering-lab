@@ -1,75 +1,90 @@
-# TokenOps Cost Engineering Lab
+# TokenOps Cost Engineering Lab — Portfolio-Hosted Module
 
 **Raghuramreddy**  
 *Designing technology for human experience*
 
-TokenOps is a standalone browser-local decision lab for **API model economics** and **GitHub Copilot AI Credits**. It compares officially sourced pricing, estimates workload cost under editable assumptions, tracks cost-impacting product changes, and publishes a manifest for later integration into `raghuramreddy.tech`.
+TokenOps is a separately maintained source repository for a live interactive module rendered through the main portfolio website. It does **not** publish a separate public website.
+
+## Public delivery model
+
+```text
+tokenops-cost-engineering-lab
+  owns source, data registries, tests and the embed build
+        ↓
+raghuramreddy-updated portfolio build
+  checks out this repository and runs npm run build:embed
+        ↓
+raghuramreddy.tech/pages/tokenops.html
+  mounts the live TokenOps lab inside the portfolio design shell
+```
 
 ## Modules
 
-1. **API Model Cost Lab** — direct provider API pricing for OpenAI, Anthropic, Google Gemini and xAI.
-2. **GitHub Copilot AI Credits Lab** — Copilot-specific model pricing, included credits, agentic workload assumptions and overage forecasting.
-3. **AI Usage Economics Change Radar** — verified pricing, model lifecycle and billing changes.
-4. **Source Registry** — official documentation sources and verification dates.
+1. **API Model Cost Lab** — direct provider API economics with explicit provider/model selection.
+2. **GitHub Copilot AI Credits Lab** — GitHub-specific workload, model and plan estimation.
+3. **AI Usage Economics Change Radar** — verified product and billing changes.
+4. **Source Registry** — official-source traceability and verification dates.
 
+## v3 correction release
 
-## Learning Experience Included in v2
+This release corrects the previous standalone-page direction and the missing/unclear model-selection experience:
 
-Both labs now teach the economics before showing the calculator.
-
-### API Model Cost Lab
-
-- Token anatomy: input, output, cached input and cache write.
-- Direct API cost formula.
-- Processing-mode and context-tier explanation.
-- Six cost-engineering strategies.
-- Comparable scenario calculator.
-
-### GitHub Copilot AI Credits Lab
-
-- Premium-request legacy model versus token-priced AI Credits.
-- Clear legacy eligibility warning for existing annual Pro / Pro+ subscribers remaining on legacy billing after June 1, 2026.
-- AI Credit formula and plan allowance cards.
-- Worked scenario comparison and legacy PRU multiplier reference.
-- Eight AI Credit protection strategies.
-- Enterprise pool/budget warning, code review dual-cost warning and model lifecycle watch.
-
-## Guardrails
-
-- Browser-local calculations only; no backend and no API key.
-- Do not paste secrets, credentials or confidential data.
-- API pricing and GitHub Copilot billing are never mixed.
-- Results are planning estimates, not billing reconciliation.
-- Historical/retiring models are preserved but labeled accurately.
-- Displayed current pricing is sourced from official documentation and timestamped.
+- Produces `dist/portfolio-embed/`, not a deployed TokenOps Pages site.
+- Removes the standalone navbar/footer from the distributable module.
+- Adopts portfolio-compatible blue/purple design tokens in namespaced CSS.
+- Makes both calculators the default first view.
+- Adds provider and selected-model controls for both labs.
+- Shows a selected-model result before optional comparisons.
+- Splits critical data from optional learning/radar loads.
+- Shows loading, empty and error states instead of silent blank areas.
+- Preserves existing verified pricing registry values unchanged.
 
 ## Run locally
 
-Requires Node.js 20+.
+Requires Node.js 20+; Node.js 24 is used in GitHub Actions.
 
 ```bash
+npm install
 npm run validate
 npm test
+npm run build:embed
 npm start
 ```
 
 Open `http://localhost:4173`.
 
-## Structure
+The local `index.html` is a **development harness only**. It simulates the portfolio shell and mounts the same embed distribution the portfolio will consume.
 
-```text
-assets/data/             Verified price, plan, scenario and announcement registries
-assets/js/pages/         Browser-only calculation and rendering modules
-portfolio/manifest.json  Contract later consumed by the main portfolio site
-docs/                    Calculation, governance and integration documentation
-scripts/                 Validation, tests and local server
-legacy/                  Preserve source from the original portfolio here
+## UI smoke testing
+
+```bash
+npx playwright install chromium
+npm run test:ui
+npm run validate:release
 ```
 
-## Portfolio integration
+## Distribution contract
 
-The portfolio should later read `portfolio/manifest.json` from this repository and display TokenOps as a live external laboratory. Application code stays here; it is not copied into the portfolio repository.
+`npm run build:embed` generates:
 
-## Current release
+```text
+dist/portfolio-embed/
+├── tokenops-lab.js
+├── tokenops-lab.css
+├── manifest.json
+└── data/
+    ├── tokenops-api-models.json
+    ├── tokenops-copilot-models.json
+    ├── tokenops-copilot-plans.json
+    ├── tokenops-scenarios.json
+    ├── tokenops-learning-content.json
+    ├── tokenops-copilot-legacy-pru.json
+    └── tokenops-announcements.json
+```
 
-`0.1.0` — Local starter ready: working lab, official-source seed registries, validation, tests and GitHub Pages deployment workflow.
+## Deployment boundary
+
+- Keep `.github/workflows/validate.yml`.
+- Do not run a GitHub Pages deployment from this repository.
+- If a Pages site was enabled previously, unpublish it in repository **Settings → Pages**.
+- The live experience becomes public only after the portfolio consumes this bundle.

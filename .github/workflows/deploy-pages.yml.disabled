@@ -1,39 +1,8 @@
-name: Deploy TokenOps to GitHub Pages
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-concurrency:
-  group: tokenops-pages
-  cancel-in-progress: true
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm install
-      - run: npx playwright install --with-deps
-      - run: npm run validate
-      - run: npm test
-      - run: npm run test:ui
-  deploy:
-    needs: validate
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-      - id: deployment
-        uses: actions/deploy-pages@v4
+# STANDALONE PUBLIC DEPLOYMENT INTENTIONALLY DISABLED
+#
+# TokenOps is a source repository for a portfolio-hosted module.
+# The public lab is rendered inside raghuramreddy.tech after the portfolio
+# workflow checks out this repository and runs npm run build:embed.
+#
+# If GitHub Pages was enabled previously for this repository, unpublish that
+# existing site under Settings > Pages.

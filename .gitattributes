@@ -1,0 +1,5 @@
+# Keep source, configuration and generated web-module inputs stable across Windows and GitHub Actions.
+* text=auto eol=lf
+
+# PowerShell helper scripts may use Windows-native line endings.
+*.ps1 text eol=crlf

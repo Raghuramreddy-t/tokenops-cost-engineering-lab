@@ -1,25 +1,15 @@
 {
   "releases": [
     {
-      "version": "0.2.0",
-      "date": "2026-05-31",
-      "status": "Learning Labs Ready",
+      "version": "0.3.0",
+      "status": "Portfolio Embed Ready",
+      "updatedAt": "2026-05-31",
       "highlights": [
-        "Two complete learning journeys before calculators",
-        "GitHub Copilot billing transition and legacy PRU explainer",
-        "Worked examples, AI Credit protection playbook and lifecycle watch",
-        "Separate official-source API and Copilot registries"
-      ]
-    },
-    {
-      "version": "0.1.0",
-      "date": "2026-05-31",
-      "status": "Local Starter Ready",
-      "highlights": [
-        "Standalone repository package",
-        "Separate API and GitHub Copilot economic models",
-        "Official-source verified initial registries",
-        "Portfolio integration manifest"
+        "Portfolio-hosted module distribution",
+        "Calculator-first API and Copilot labs",
+        "Explicit provider and model selection",
+        "Resilient critical and optional data loading",
+        "Portfolio-aligned design tokens"
       ]
     }
   ]
