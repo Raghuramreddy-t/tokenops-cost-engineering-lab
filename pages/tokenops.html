@@ -1,0 +1,670 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <script>!function () { var t = localStorage.getItem("theme") || "dark"; document.documentElement.setAttribute("data-theme", t); document.documentElement.classList.add("no-transition"); requestAnimationFrame(function () { requestAnimationFrame(function () { document.documentElement.classList.remove("no-transition"); }) }) }();</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokenOps Cost Engineering Lab</title>
+    <meta name="description"
+        content="TokenOps: an interactive cost engineering lab for direct API economics and GitHub Copilot AI Credits, with workload modeling, source verification, and lifecycle intelligence.">
+    <meta property="og:title" content="TokenOps Cost Engineering Lab">
+    <meta property="og:description"
+        content="TokenOps: an interactive cost engineering lab for direct API economics and GitHub Copilot AI Credits, with workload modeling, source verification, and lifecycle intelligence.">
+    <meta property="og:image:alt" content="TokenOps Cost Engineering Lab - Compare AI model pricing and estimate costs"></meta>
+    <meta name="twitter:title" content="TokenOps Cost Engineering Lab">
+    <meta name="twitter:description" content="Interactive cost engineering lab for AI model economics and GitHub Copilot AI Credits"></meta>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://raghuramreddy.tech/pages/tokenops.html">
+    <meta property="og:image" content="https://raghuramreddy.tech/assets/images/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://raghuramreddy.tech/assets/images/og-image.svg">
+    <link rel="canonical" href="https://raghuramreddy.tech/pages/tokenops.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css?v=20260523">
+    <link rel="stylesheet" href="../assets/css/animations.css?v=20260523">
+    <link rel="stylesheet" href="../assets/css/pages.css?v=20260523">
+    <link rel="stylesheet" href="../assets/css/components.css?v=20260523">
+    <link rel="stylesheet" href="../assets/css/design-v2.css?v=20260523">
+    <link rel="stylesheet" href="../assets/css/enhancements.css?v=20260523">
+    <link rel="stylesheet" href="../assets/css/token-cost-comparator.css?v=20260523">
+    <link rel="stylesheet" href="../assets/css/tokenops.css?v=20260523">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%B7%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+    <canvas id="aurora-canvas" aria-hidden="true"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-icon">RRR</span>
+                <div class="logo-stack">
+                    <span class="logo-name">Raghuramreddy</span>
+                    <span class="logo-tagline">Designing technology for human experience</span>
+                </div>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="tokenops.html" class="nav-link active">TokenOps Lab</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                        </path>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header ph--blog">
+        <div class="container">
+            <div class="page-header-content">
+                <span class="page-tag">AI Engineering Tool</span>
+                <h1 class="page-title">TokenOps Cost Engineering Lab<span class="gradient-text"></span></h1>
+                <p class="page-subtitle">
+                    Model intelligence and tokenization for AI builders. Compare current Claude, OpenAI, Gemini, and Grok models, calculate costs, and plan your AI budget.
+                </p>
+                <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:16px;">
+                    <a class="project-link" href="#to-comparison-tabs" style="display:inline-flex; align-items:center; gap:8px;">
+                        <span>Compare models</span>
+                    </a>
+                    <a class="project-link" href="#live-demo" style="display:inline-flex; align-items:center; gap:8px;">
+                        <span>Open Ledger Lab</span>
+                    </a>
+                    <a class="project-link" href="#to-budget-tabs" style="display:inline-flex; align-items:center; gap:8px;">
+                        <span>Monthly budget simulator</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+
+            <!-- SECTION A: MODEL COMPARISON TABLE -->
+            <section class="to-comparison-section">
+                <h2>Model Intelligence</h2>
+                <p>Compare pricing, capabilities, and performance across current Claude, OpenAI, Gemini, and Grok models. Last updated: <strong id="to-version-badge">06/13/2026</strong></p>
+                    <p style="margin-top: 6px; color: var(--text-secondary); font-size: 0.95rem;">
+                    The comparison tables focus on the important models teams actually use, and each row now includes an official release date.
+                </p>
+
+                <!-- Provider Tabs -->
+                <div class="tc-provider-tabs" id="to-comparison-tabs"></div>
+                <div id="to-comparison-panels"></div>
+            </section>
+
+            <!-- SECTION B: LEDGER LAB (PROMPT COST ESTIMATOR) -->
+            <section class="tc-demo-section">
+                <div class="demo-badge">Live Demo</div>
+                <h2>TokenOps Lab</h2>
+                <p>
+                    Paste your text or prompt below. The lab calculates token count in real-time and shows you costs across current Claude, OpenAI, Gemini, and Grok models. Switch provider tabs to compare the families side-by-side.
+                </p>
+
+                <div class="tc-wrap" id="live-demo">
+
+                    <!-- Shared Input Section -->
+                    <div class="tc-input-section">
+                        <label for="to-lab-input" class="tc-label">Paste or type your text:</label>
+                        <div class="tc-input-container">
+                            <textarea id="to-lab-input" class="tc-input-area" placeholder="Type or paste your text here..."
+                                rows="6"></textarea>
+                            <div class="tc-stats">
+                                <div class="tc-stat">
+                                    <span class="tc-stat-label">Characters:</span>
+                                    <span class="tc-stat-value" id="to-lab-char-count">0</span>
+                                </div>
+                                <div class="tc-stat">
+                                    <span class="tc-stat-label">Approx. Tokens:</span>
+                                    <span class="tc-stat-value tc-highlight" id="to-lab-token-count">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Row -->
+                    <div class="tc-settings">
+                        <div class="tc-setting-group">
+                            <label for="to-lab-output-ratio">Output Token Ratio:</label>
+                            <select id="to-lab-output-ratio" class="tc-select">
+                                <option value="0.1">10% (summary / classification)</option>
+                                <option value="0.2">20% (moderate output)</option>
+                                <option value="0.5" selected>50% (balanced)</option>
+                                <option value="1.0">100% (detailed generation)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Provider Tabs -->
+                    <div class="tc-provider-tabs" id="to-lab-tabs"></div>
+                    <div id="to-lab-panels"></div>
+
+                    <div class="tc-disclaimer">
+                        <strong>Pricing last verified: 06/13/2026. Rates change frequently. This tool is for estimation, not billing reconciliation.</strong>
+                        <span>Token counts are approximate and may vary with tokenizer, content type, tools, and model behavior.</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SECTION C: BUDGET SIMULATOR -->
+            <section class="to-budget-section">
+                <h2>Monthly Budget Simulator</h2>
+                <p>
+                    Estimate your monthly AI infrastructure costs. Adjust the request volume and token counts to match your workload, then see the projected costs across current Claude, OpenAI, Gemini, and Grok models.
+                </p>
+
+                <div class="to-budget-controls">
+                    <div class="to-budget-input-group">
+                        <label>Requests Per Day</label>
+                        <div class="to-budget-input-row">
+                            <input type="range" id="to-budget-req-slider" class="to-budget-slider" min="0" max="6"
+                                value="3" aria-label="Requests per day">
+                            <div class="to-budget-value"><span id="to-budget-req-display">1,000</span> req/day</div>
+                        </div>
+                    </div>
+
+                    <div class="to-budget-input-group">
+                        <label>Average Input Tokens Per Request</label>
+                        <div class="to-budget-input-row">
+                            <input type="number" id="to-budget-input-tokens" class="to-budget-number-input"
+                                value="1000" min="10" max="100000" aria-label="Input tokens per request">
+                        </div>
+                    </div>
+
+                    <div class="to-budget-input-group">
+                        <label>Average Output Tokens Per Request</label>
+                        <div class="to-budget-input-row">
+                            <input type="number" id="to-budget-output-tokens" class="to-budget-number-input"
+                                value="200" min="10" max="100000" aria-label="Output tokens per request">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Claude Budget Table -->
+                <div class="tc-provider-tabs" id="to-budget-tabs"></div>
+                <div id="to-budget-panels"></div>
+            </section>
+
+        </div>
+    </main>
+    <!-- FOOTER DIVIDER -->
+    <div class="footer-divider"></div>
+
+    <footer class="footer footer--pro">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-card footer-brand-card">
+            <a href="../index.html" class="footer-logo">
+              <span class="logo-icon">RRR</span>
+              <span class="logo-text">Raghuramreddy</span>
+            </a>
+
+            <p class="footer-tagline">Designing technology for human experience</p>
+            <p class="footer-subline">Intelligent Infrastructure Ecosystems<br>Operational Intelligence &bull; Lifecycle Governance &bull; Infrastructure Cognition</p>
+
+            <div class="footer-social-row">
+              <a class="social-pill" href="https://github.com/Raghuramreddy-t" target="_blank" rel="noopener">GitHub</a>
+              <a class="social-pill" href="https://www.linkedin.com/in/raghuramreddy-t-9237901b3" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="social-pill" href="../contact.html">Contact</a>
+            </div>
+          </div>
+
+          <div class="footer-links-col">
+            <div class="footer-col">
+              <h4 class="footer-col-title">Navigation</h4>
+              <div class="footer-links">
+                <a href="../index.html" class="footer-link">Home</a>
+                <a href="tokenops.html" class="footer-link">TokenOps Lab</a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Resources</h4>
+              <div class="footer-links">
+                <a href="https://github.com/Raghuramreddy-t/tokenops-cost-engineering-lab" class="footer-link" target="_blank" rel="noopener">Source Repository</a>
+                <a href="https://github.com/Raghuramreddy-t/tokenops-cost-engineering-lab/tree/main/docs" class="footer-link" target="_blank" rel="noopener">Documentation</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-card footer-connect-card">
+            <div class="footer-connect-header">
+              <h4 class="footer-col-title">Connect</h4>
+              <p class="footer-connect-note">Fastest response on LinkedIn.</p>
+            </div>
+
+            <div class="footer-icon-grid">
+              <a class="icon-btn" href="https://github.com/Raghuramreddy-t" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-4 1.5-4-2.5-5-3m10 6v-3.5c0-1 .1-1.4-.5-2 2.2-.2 4.5-1.1 4.5-5a3.9 3.9 0 0 0-1-2.7 3.6 3.6 0 0 0-.1-2.7s-.9-.3-2.9 1.1a10 10 0 0 0-5.2 0C6.8 2.3 5.9 2.6 5.9 2.6a3.6 3.6 0 0 0-.1 2.7A3.9 3.9 0 0 0 4.8 8c0 3.9 2.3 4.8 4.5 5-.5.5-.6 1.1-.5 2V22"/></svg>
+              </a>
+              <a class="icon-btn" href="https://www.linkedin.com/in/raghuramreddy-t-9237901b3" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v2a4 4 0 0 1 2-3z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a class="icon-btn" href="../contact.html" aria-label="Contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg>
+              </a>
+            </div>
+
+            <a class="footer-cta" href="../contact.html">Let's talk &rarr;</a>
+          </div>
+
+          <div class="footer-visual" aria-hidden="true">
+            <span class="fv-orb fv-orb-1"></span>
+            <span class="fv-orb fv-orb-2"></span>
+            <span class="fv-line fv-line-1"></span>
+            <span class="fv-line fv-line-2"></span>
+            <span class="fv-dot fv-dot-1"></span>
+            <span class="fv-dot fv-dot-2"></span>
+          </div>
+        </div>
+
+        <div class="footer-bottom footer-bottom--pro">
+          <p>&copy; 2026 RaghuRamReddy Thummalapalli. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js?v=20260523"></script>
+    <script src="../assets/js/aurora.js?v=20260523"></script>
+    <script src="../assets/js/token-pricing.js?v=20260523"></script>
+
+    <script>
+        // TokenOps Platform - Multi-tool AI cost engineering interface
+        (() => {
+            const modelsData = window.TOKENOPS_PRICING;
+            const providerIds = modelsData ? modelsData.providers.map(provider => provider.id) : [];
+            let activeProvider = {
+                lab: providerIds[0] || 'claude',
+                comparison: providerIds[0] || 'claude',
+                budget: providerIds[0] || 'claude'
+            };
+
+            const config = {
+                tokenEstimate: 4.5,
+                monthlyDays: 30,
+                yearlyMonths: 12
+            };
+
+            const reqPerDayMap = [100, 500, 1000, 5000, 10000, 50000, 100000];
+
+            function loadModels() {
+                if (!modelsData) {
+                    console.error('Missing shared token pricing data.');
+                    return;
+                }
+                initializeUI();
+            }
+
+            function initializeUI() {
+                renderProviderChrome();
+                renderComparisonTables();
+                renderLabUI();
+                renderBudgetUI();
+                setupEventListeners();
+            }
+
+            function getProvider(id) {
+                return modelsData.providers.find(p => p.id === id);
+            }
+
+            function getProviderName(id) {
+                const provider = getProvider(id);
+                return provider ? provider.name : id;
+            }
+
+            function renderProviderChrome() {
+                renderProviderTabsAndPanels(
+                    'comparison',
+                    'to-comparison-tabs',
+                    'to-comparison-panels',
+                    provider => `
+                        <table class="to-comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Release Date</th>
+                                    <th>Deprecation</th>
+                                    <th>Input Cost</th>
+                                    <th>Output Cost</th>
+                                    <th>Context</th>
+                                    <th>Tier</th>
+                                    <th>Reasoning</th>
+                                    <th>Vision</th>
+                                    <th>Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody id="to-table-${provider.id}"></tbody>
+                        </table>`
+                );
+
+                renderProviderTabsAndPanels(
+                    'lab',
+                    'to-lab-tabs',
+                    'to-lab-panels',
+                    provider => `
+                        <div class="tc-model-grid"></div>`
+                );
+
+                renderProviderTabsAndPanels(
+                    'budget',
+                    'to-budget-tabs',
+                    'to-budget-panels',
+                    provider => `
+                        <table class="to-budget-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th style="text-align: right;">Cost/Request</th>
+                                    <th style="text-align: right;">Daily Cost</th>
+                                    <th style="text-align: right;">Monthly Cost</th>
+                                    <th style="text-align: right;">Annual Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody id="to-budget-table-${provider.id}"></tbody>
+                        </table>
+                        <div class="to-budget-savings" id="to-budget-savings-${provider.id}">
+                            <strong>${provider.name} savings are rendered below.</strong>
+                        </div>`
+                );
+            }
+
+            function renderProviderTabsAndPanels(section, tabsContainerId, panelsContainerId, panelMarkupFactory) {
+                const tabsContainer = document.getElementById(tabsContainerId);
+                const panelsContainer = document.getElementById(panelsContainerId);
+                if (!tabsContainer || !panelsContainer) return;
+
+                tabsContainer.innerHTML = '';
+                panelsContainer.innerHTML = '';
+
+                providerIds.forEach((providerId, index) => {
+                    const provider = getProvider(providerId);
+                    if (!provider) return;
+
+                    const tab = document.createElement('button');
+                    tab.className = `tc-ptab${index === 0 ? ' active' : ''}`;
+                    tab.dataset.provider = providerId;
+                    tab.dataset.section = section;
+                    tab.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
+                    tab.textContent = provider.name;
+                    tabsContainer.appendChild(tab);
+
+                    const panel = document.createElement('div');
+                    panel.className = `tc-provider-panel${index === 0 ? ' active' : ''}`;
+                    panel.id = `${tabsContainerId.replace('-tabs', '-panel-')}${providerId}`;
+                    panel.innerHTML = panelMarkupFactory(provider);
+                    panelsContainer.appendChild(panel);
+                });
+            }
+
+            // ===== COMPARISON TABLES =====
+            function renderComparisonTables() {
+                providerIds.forEach(providerId => {
+                    const provider = getProvider(providerId);
+                    const tbody = document.getElementById(`to-table-${providerId}`);
+                    if (!provider || !tbody) return;
+                    tbody.innerHTML = '';
+
+                    provider.models.forEach(model => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td class="to-model-name">${model.name}</td>
+                            <td class="to-release-cell">${formatReleaseDate(model.release_date)}</td>
+                            <td class="to-deprecation-cell">${formatDeprecation(model.deprecation_date, model.deprecation_scope)}</td>
+                            <td class="to-pricing-cell">$${model.input_per_mtok.toFixed(2)}</td>
+                            <td class="to-pricing-cell">$${model.output_per_mtok.toFixed(2)}</td>
+                            <td class="to-context-cell">${formatContextWindow(model.context_window_k)}</td>
+                            <td><span class="to-tier-badge ${model.tier}">${model.tier}</span></td>
+                            <td><span class="to-capability-dot ${model.reasoning ? 'yes' : 'no'}"></span></td>
+                            <td><span class="to-capability-dot ${model.vision ? 'yes' : 'no'}"></span></td>
+                            <td class="to-best-for">${model.best_for}</td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                });
+
+                document.getElementById('to-version-badge').textContent = '06/13/2026';
+            }
+
+            // ===== LEDGER LAB =====
+            function renderLabUI() {
+                providerIds.forEach(providerId => {
+                    const provider = getProvider(providerId);
+                    if (!provider) return;
+                    const panelId = `to-lab-panel-${providerId}`;
+                    const gridClass = 'tc-model-grid';
+                    const panel = document.getElementById(panelId);
+                    if (!panel) return;
+                    const grid = panel.querySelector('.tc-model-grid') || document.createElement('div');
+                    grid.className = gridClass;
+                    grid.innerHTML = '';
+
+                    provider.models.forEach(model => {
+                        const modelCard = createLabModelCard(model, providerId);
+                        grid.appendChild(modelCard);
+                    });
+
+                    if (!panel.querySelector('.tc-model-grid, .tc-model-grid-6')) {
+                        panel.appendChild(grid);
+                    }
+                });
+            }
+
+            function createLabModelCard(model, providerId) {
+                const card = document.createElement('div');
+                const modelClass = model.is_legacy ? `tc-${model.id} tc-model-legacy` : `tc-${model.id}`;
+                card.className = `tc-model-card ${modelClass}`;
+                card.innerHTML = `
+                    <div class="tc-model-header">
+                        <h3>${model.name}</h3>
+                        <span class="tc-model-tier ${model.tier}">${model.tier.toUpperCase()}</span>
+                        ${model.is_legacy ? `<span class="tc-legacy-badge">${model.deprecated_by ? 'Deprecated' : 'Legacy'}</span>` : ''}
+                    </div>
+                    <div class="tc-model-meta">Released ${formatReleaseDate(model.release_date)}</div>
+                    <div class="tc-model-meta tc-model-deprecation">${formatDeprecation(model.deprecation_date, model.deprecation_scope)}</div>
+                    <div class="tc-pricing">
+                        <div class="tc-price-row"><span>Input:</span><code>$${model.input_per_mtok.toFixed(2)} / 1M</code></div>
+                        <div class="tc-price-row"><span>Output:</span><code>$${model.output_per_mtok.toFixed(2)} / 1M</code></div>
+                    </div>
+                    <div class="tc-model-cost">
+                        <div class="tc-cost-label">Cost per Request</div>
+                        <div class="tc-cost-value" id="to-lab-cost-${providerId}-${model.id}">$0.00</div>
+                    </div>
+                    <div class="tc-use-case">${model.best_for}</div>
+                `;
+                return card;
+            }
+
+            function updateLabCosts() {
+                const text = document.getElementById('to-lab-input').value;
+                const charCount = text.length;
+                const tokenCount = countTokens(text);
+                const outputRatio = parseFloat(document.getElementById('to-lab-output-ratio').value);
+                const outputTokens = tokenCount === 0 ? 0 : Math.max(1, Math.ceil(tokenCount * outputRatio));
+
+                document.getElementById('to-lab-char-count').textContent = charCount.toLocaleString();
+                document.getElementById('to-lab-token-count').textContent = tokenCount.toLocaleString();
+
+                providerIds.forEach(providerId => {
+                    const provider = getProvider(providerId);
+                    if (!provider) return;
+                    provider.models.forEach(model => {
+                        const inputCost = (tokenCount * model.input_per_mtok) / 1000000;
+                        const outputCost = (outputTokens * model.output_per_mtok) / 1000000;
+                        const totalCost = inputCost + outputCost;
+                        const costEl = document.getElementById(`to-lab-cost-${providerId}-${model.id}`);
+                        if (costEl) costEl.textContent = formatCost(totalCost);
+                    });
+                });
+            }
+
+            // ===== BUDGET SIMULATOR =====
+            function renderBudgetUI() {
+                updateBudgetCosts();
+            }
+
+            function updateBudgetCosts() {
+                const reqSlider = document.getElementById('to-budget-req-slider');
+                const inputTokensEl = document.getElementById('to-budget-input-tokens');
+                const outputTokensEl = document.getElementById('to-budget-output-tokens');
+
+                const reqPerDay = reqPerDayMap[parseInt(reqSlider.value)];
+                const inputTokens = parseInt(inputTokensEl.value) || 1000;
+                const outputTokens = parseInt(outputTokensEl.value) || 200;
+
+                document.getElementById('to-budget-req-display').textContent = reqPerDay.toLocaleString();
+
+                providerIds.forEach(providerId => {
+                    const provider = getProvider(providerId);
+                    if (!provider) return;
+                    const tableId = `to-budget-table-${providerId}`;
+                    const table = document.getElementById(tableId);
+                    if (!table) return;
+                    table.innerHTML = '';
+
+                    provider.models.forEach(model => {
+                        const costPerReq = ((inputTokens * model.input_per_mtok) + (outputTokens * model.output_per_mtok)) / 1000000;
+                        const dailyCost = costPerReq * reqPerDay;
+                        const monthlyCost = dailyCost * config.monthlyDays;
+                        const annualCost = monthlyCost * config.yearlyMonths;
+
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td class="to-model-name">${model.name}</td>
+                            <td class="to-cost-cell">${formatCost(costPerReq)}</td>
+                            <td class="to-cost-cell daily">${formatCost(dailyCost)}</td>
+                            <td class="to-cost-cell monthly">${formatCost(monthlyCost)}</td>
+                            <td class="to-cost-cell annual">${formatCost(annualCost)}</td>
+                        `;
+                        table.appendChild(row);
+                    });
+
+                    // Compute savings
+                    const costs = provider.models.map(model => {
+                        const costPerReq = ((inputTokens * model.input_per_mtok) + (outputTokens * model.output_per_mtok)) / 1000000;
+                        return costPerReq * reqPerDay * config.monthlyDays * config.yearlyMonths;
+                    });
+                    const minCost = Math.min(...costs);
+                    const maxCost = Math.max(...costs);
+                    const savings = maxCost - minCost;
+                    const cheapestIdx = costs.indexOf(minCost);
+                    const mostExpensiveIdx = costs.indexOf(maxCost);
+
+                    const savingsEl = document.getElementById(`to-budget-savings-${providerId}`);
+                    savingsEl.innerHTML = `<strong>${provider.models[cheapestIdx].name} saves ${formatCost(savings)}/year vs. ${provider.models[mostExpensiveIdx].name}</strong>`;
+                });
+            }
+
+            // ===== UTILITIES =====
+            function countTokens(text) {
+                if (!text.trim()) return 0;
+                return Math.max(1, Math.round(text.length / config.tokenEstimate));
+            }
+
+            function formatCost(dollars) {
+                if (dollars < 0.01) return '$' + dollars.toFixed(6);
+                if (dollars < 1) return '$' + dollars.toFixed(4);
+                return '$' + dollars.toFixed(2);
+            }
+
+            function formatContextWindow(contextWindowK) {
+                if (contextWindowK >= 1000) {
+                    const millions = contextWindowK / 1000;
+                    return millions % 1 === 0 ? `${millions}M` : `${millions.toFixed(2)}M`;
+                }
+                return `${contextWindowK}K`;
+            }
+
+            function formatReleaseDate(releaseDate) {
+                if (!releaseDate) return 'â€”';
+                const date = new Date(`${releaseDate}T00:00:00Z`);
+                if (Number.isNaN(date.getTime())) return releaseDate;
+                return date.toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                    timeZone: 'UTC'
+                });
+            }
+
+            function formatDeprecation(deprecationDate, scope) {
+                if (!deprecationDate) return 'Current';
+                const date = new Date(`${deprecationDate}T00:00:00Z`);
+                const formatted = Number.isNaN(date.getTime())
+                    ? deprecationDate
+                    : date.toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric',
+                        timeZone: 'UTC'
+                    });
+                return scope ? `${formatted} (${scope})` : formatted;
+            }
+
+            // ===== EVENT LISTENERS =====
+            function setupEventListeners() {
+                // Lab events
+                document.getElementById('to-lab-input').addEventListener('input', updateLabCosts);
+                document.getElementById('to-lab-input').addEventListener('paste', () => setTimeout(updateLabCosts, 10));
+                document.getElementById('to-lab-output-ratio').addEventListener('change', updateLabCosts);
+
+                // Budget events
+                document.getElementById('to-budget-req-slider').addEventListener('input', updateBudgetCosts);
+                document.getElementById('to-budget-input-tokens').addEventListener('input', updateBudgetCosts);
+                document.getElementById('to-budget-output-tokens').addEventListener('input', updateBudgetCosts);
+
+                // Provider tabs (unified for all sections)
+                document.querySelectorAll('.tc-ptab').forEach(tab => {
+                    tab.addEventListener('click', () => switchProvider(tab.dataset.provider, tab.dataset.section));
+                });
+            }
+
+            function switchProvider(providerId, section) {
+                section = section || 'lab';
+                activeProvider[section] = providerId;
+
+                // Update active tab
+                document.querySelectorAll(`.tc-ptab[data-section="${section}"]`).forEach(tab => {
+                    tab.classList.toggle('active', tab.dataset.provider === providerId);
+                    tab.setAttribute('aria-selected', tab.dataset.provider === providerId);
+                });
+
+                // Update active panel
+                document.querySelectorAll(`.tc-provider-panel[id*="${section}"]`).forEach(panel => {
+                    const panelProviderId = providerIds.find(id => panel.id.endsWith(id));
+                    panel.classList.toggle('active', panelProviderId === providerId);
+                });
+            }
+
+            // Initialize on load
+            loadModels();
+        })();
+    </script>
+
+</body>
+
+</html>
+
+
+
